@@ -4,6 +4,7 @@ import Header from './components/Header';
 import PosterImage from './images/poster.webp'
 import HitBox from './components/HitBox';
 import characters from './data/characters.json'
+import Intro from './components/Intro';
 
 
 type CharacterType = {
@@ -17,6 +18,7 @@ type CharacterType = {
 function App() {
   const [data, setData] = useState<CharacterType[]>([])
   const [gameEnd, setGameEnd] = useState(false);
+  const [gameStart, setGameStart] = useState(false);
 
   useEffect(() => {
     setData(characters);
@@ -55,9 +57,17 @@ function App() {
   })
 
 
+  const startGame = () => {
+    setGameStart(true);
+  }
+
   return(
     <div>
       {gameEnd === false ? <div className='app'>
+        {!gameStart && <Intro
+          startGame={startGame}
+        />}
+        
         <Header
           characterData={data}
         />
