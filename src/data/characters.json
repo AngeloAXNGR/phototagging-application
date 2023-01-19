@@ -1,0 +1,24 @@
+[
+	{
+		"id":1,
+		"name":"Velvet",
+		"XCoords": 30,
+		"YCoords": 117.5,
+		"isMarked":false
+	},
+	{
+		"id":2,
+		"name":"Toan",
+		"XCoords": 33,
+		"YCoords": 133,
+		"isMarked":false
+	},
+	{
+		"id":3,
+		"name":"Tommy",
+		"XCoords": 63,
+		"YCoords": 108,
+		"isMarked": false
+	}
+	
+]
