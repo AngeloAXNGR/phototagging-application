@@ -1,4 +1,6 @@
 import React from 'react'
+import { useEffect, useState } from 'react'
+import { setInterval } from 'timers/promises'
 import Avatar from './Avatar'
 
 type HeaderType = {
@@ -6,7 +8,10 @@ type HeaderType = {
 		name:string
 		isMarked:boolean
 	}[]
+	counter:string
 }
+
+
 
 export default function Header(props:HeaderType) {
 	const avatars = props.characterData.map(data => {
@@ -21,9 +26,9 @@ export default function Header(props:HeaderType) {
 		<header>
 			<div className="top-header">
 				<div className="avatars">{avatars}</div>
-				<div className="timer">1 Mins 59 Seconds</div>
+				<div className="timer"><h1>{props.counter}</h1></div>
 			</div>
-			<div className="bottom-header"></div>
+
 		</header>
 	)
 }
