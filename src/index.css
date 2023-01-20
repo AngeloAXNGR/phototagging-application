@@ -186,9 +186,10 @@ header{
 }
 
 .player-scores{
-  height:350px;
+  
   overflow: auto;
   width: 70%;
+  height: 50vh;
   margin:0 auto;
 }
 
