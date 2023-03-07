@@ -30,9 +30,10 @@ export default function Score(props:ScoreType) {
 	},[]);
 
 	const scoreData = scoreList.map((score: {name: string , score:string}, index:number) => {
+		const rank = index + 1;
 		return(
 			<tr>
-				<td>{index+1}</td>
+				<td>{rank}</td>
 				<td>{score.name}</td>
 				<td>{score.score}</td>
 			</tr>
